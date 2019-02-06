@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import NewsletterGG from './NewsLetterGG';
-import SocialIcons from './SocialMediaIcons';
 import lang from '../utils/lang';
+import NewsletterNew from './NewsLetterNew';
+import SocialIcons from './SocialMediaIcons';
 
 const Container = styled.section`
   background: url(/images/header-bg-iphone.png);
@@ -122,7 +122,7 @@ class HomeHero extends React.Component {
                       <span id="contact">Contact Us</span>
                     </a>
                   </h2>
-                  <NewsletterGG />
+                  <NewsletterNew />
                   <SocialIcons />
                 </Wrapper>
                 <div className="column" />

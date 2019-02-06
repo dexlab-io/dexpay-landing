@@ -25,7 +25,7 @@ const Container = styled.section`
   }
 `;
 
-const NewsLetterGG = () => (
+const NewsLetterNew = () => (
   <Container className="section">
     <div className="container">
       <div className="columns">
@@ -37,4 +37,4 @@ const NewsLetterGG = () => (
   </Container>
 );
 
-export default NewsLetterGG;
+export default NewsLetterNew;
