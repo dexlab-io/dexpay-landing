@@ -34,40 +34,6 @@ const LogoTextStyled = styled.span`
   color: ${theme.textColorBlack};
 `;
 
-const LinkStyled = styled(Link)`
-  color: ${theme.textColorBlack};
-  padding-left: 1.5rem;
-`;
-
-const LinkStyledTwo = styled.a`
-  color: ${theme.textColorBlack};
-  padding-left: 1.5rem;
-`;
-
-const MobileMenu = styled.div`
-  position: absolute;
-  left: 0px;
-  height: auto;
-  width: 100%;
-  background-color: ${theme.textColorWhite};
-  font-weight: ${theme.fontMedium};
-  z-index: 2;
-  overflow: hidden;
-  opacity: 0.9;
-  border-radius: 0.8rem;
-  padding: 0.5rem;
-  box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
-  a {
-    padding: 0.5rem !important;
-    color: ${theme.textColorBlack};
-    opacity: 1;
-  }
-  a:hover {
-  }
-  .menu-list a {
-    padding: 0 0.75em;
-  }
-`;
 class TopHeader extends React.Component {
   constructor(props) {
     super(props);
@@ -123,39 +89,6 @@ class TopHeader extends React.Component {
                 <span aria-hidden="true" />
               </a>
             </div>
-            <MobileMenu
-              className={
-                isActive
-                  ? 'has-text-centered is-hidden-desktop'
-                  : 'has-text-centered is-hidden-mobile is-hidden-tablet'
-              }
-            >
-              <aside className="menu">
-                <ul className="menu-list is-size-6">
-                  {/* <a href="https://www.dexlab.io/">
-                    <li>About</li>
-                  </a> */}
-                  <a href="https://medium.com/dexlab-io">
-                    <li>Blog</li>
-                  </a>
-                  <a href="https://dexwallet.freshdesk.com/">
-                    <li>Support</li>
-                  </a>
-                  <Link to="/terms-and-conditions/">
-                    <li>Terms & Conditions</li>
-                  </Link>
-                  <Link to="/privacy-policy/">
-                    <li>Privacy</li>
-                  </Link>
-                  <a href="mailto:founders@dexlab.io">
-                    <li>Business Inquiries</li>
-                  </a>
-                  <div className="navbar-item">
-                    <Link to="/whitelabel">Whitelabel</Link>
-                  </div>
-                </ul>
-              </aside>
-            </MobileMenu>
 
             <div id="navbarExampleTransparentExample" className="navbar-menu">
               <div className="navbar-end  is-size-6">
@@ -163,32 +96,6 @@ class TopHeader extends React.Component {
                   {/* <LinkStyledTwo href="https://www.dexlab.io/">
                     About
                   </LinkStyledTwo> */}
-                </div>
-                <div className="navbar-item">
-                  <LinkStyledTwo href="https://medium.com/dexlab-io">
-                    Blog
-                  </LinkStyledTwo>
-                </div>
-                <div className="navbar-item">
-                  <LinkStyled to="/terms-and-conditions/">
-                    Terms & Conditions
-                  </LinkStyled>
-                </div>
-                <div className="navbar-item">
-                  <LinkStyled to="/privacy-policy/">Privacy</LinkStyled>
-                </div>
-                <div className="navbar-item">
-                  <LinkStyledTwo href="https://dexwallet.freshdesk.com/">
-                    Support
-                  </LinkStyledTwo>
-                </div>
-                <div className="navbar-item">
-                  <LinkStyledTwo href="mailto:founders@dexlab.io">
-                    Business Inquiries
-                  </LinkStyledTwo>
-                </div>
-                <div className="navbar-item">
-                  <LinkStyled to="/whitelabel">Whitelabel</LinkStyled>
                 </div>
               </div>
             </div>

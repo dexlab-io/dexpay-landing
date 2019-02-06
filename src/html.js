@@ -10,6 +10,14 @@ export default class HTML extends React.Component {
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <base href="/" target="_blank" />
           <link
+            href="https://fonts.googleapis.com/css?family=Rubik:100,200,300,400,500,600,700,800,900"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Nunito:100,200,300,400,500,600,700,800,900"
+            rel="stylesheet"
+          />
+          <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"
           />

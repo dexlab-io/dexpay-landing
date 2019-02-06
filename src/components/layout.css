@@ -3,7 +3,7 @@ button,
 input,
 select,
 textarea {
-  font-family: 'Quicksand', sans-serif !important;
+  font-family: 'Rubik', sans-serif !important;
 }
 @media screen and (min-width: 1472px) {
   .container {
@@ -22,8 +22,8 @@ textarea {
 }
 
 .title {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 400;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
   margin-bottom: 2rem !important;
 }
 

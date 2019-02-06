@@ -1,6 +1,6 @@
 module.exports = {
   DEBUG: process.env.NODE_ENV === 'development',
-  siteName: 'DexWallet - The only Wallet you need by Dexlab',
+  siteName: 'Dexpay',
   logo: '/images/dexWallet_Icon@2x',
   author: 'Parminder Klair',
   description: 'The Ethereum Wallet you need by Dexlab',

@@ -77,13 +77,6 @@ const Newsletter = () => (
                 <img src="/images/social/icon_telegram.svg" alt="telegram" />
               </a>
             </div>
-            {/*
-            <p className="level-item has-text-centered">
-              <a className="link is-info" href="">
-                <img src="/images/social/icon_wechat.svg" alt="wechat" />
-              </a>
-            </p>
-            */}
             <p className="level-item has-text-centered">
               <a className="link is-info" href="https://medium.com/dexlab-io">
                 <img src="/images/social/icon_medium.svg" alt="medium" />
@@ -95,24 +88,8 @@ const Newsletter = () => (
               </a>
             </p>
             <p className="level-item has-text-centered">
-              <a
-                className="link is-info"
-                href="https://www.facebook.com/dexlabio/"
-              >
-                <img src="/images/social/icon_facebook.svg" alt="fb" />
-              </a>
-            </p>
-            <p className="level-item has-text-centered">
               <a className="link is-info" href="https://github.com/dexlab-io">
                 <img src="/images/social/icon_github.svg" alt="github" />
-              </a>
-            </p>
-            <p className="level-item has-text-centered">
-              <a
-                className="link is-info"
-                href="https://www.reddit.com/r/dexlab/"
-              >
-                <img src="/images/social/icon_reddit.svg" alt="reddit" />
               </a>
             </p>
           </SocialContainer>

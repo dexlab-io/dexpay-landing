@@ -2,10 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import theme from '../utils/theme';
-import TopHeader from './TopHeader';
-import PreHeader from './PreHeader';
-import Modal from './Modal';
-import lang from '../utils/lang';
+import NewsletterGG from './NewsLetterGG';
+import SocialIcons from './SocialMediaIcons';
 
 const Container = styled.section`
   background: url(/images/header-bg-iphone.png);
@@ -37,20 +35,29 @@ const Container = styled.section`
     background-position: 0% 0%;
   }
 
-  .level-item {
-  }
   .title {
+    letter-spacing: -3px !important;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400 !important;
     @media only screen and (max-width: 600px) {
       font-size: 2.5rem !important;
+      line-height: 1;
+      letter-spacing: -3px !important;
     }
     @media screen and (min-width: 768px) and (max-width: 1000px) {
       font-size: 2.5rem !important;
+      line-height: 1;
+      letter-spacing: -3px !important;
     }
   }
   .subtitle {
     line-height: 1.7rem;
     text-align: justify;
     width: 92%;
+    font-weight: 100;
+    font-size: 1rem;
+    line-height: 1.4;
+    letter-spacing: -0.5px !important;
     @media only screen and (max-width: 600px) {
       line-height: 2.1rem;
       margin-top: 0rem !important;
@@ -62,6 +69,9 @@ const Container = styled.section`
       margin-top: 0rem !important;
       width: 100%;
     }
+  }
+  #contact {
+    border-bottom: 2px solid #000;
   }
 `;
 
@@ -119,52 +129,25 @@ class HomeHero extends React.Component {
 
     return (
       <React.Fragment>
-        <PreHeader />
         <Container className="section">
           <div className="container">
-            <TopHeader />
-            <Modal
-              isClicked={isClicked}
-              platform={platform}
-              handleClick={this.handleClick}
-            />
             <div className="is-hidden-mobile">
               <div className="columns">
                 <Wrapper className="column is-two-thirds">
                   <h1 className="title is-size-1 has-text-black has-text-centered-mobile">
-                    {lang.heroTitle}
+                    Sell more by accepting Dai, Eth and many other crypto
                   </h1>
-                  <h2 className="subtitle is-size-5 has-text-black has-text-weight-light">
-                    {lang.heroSubTitle}
+                  <h2 className="subtitle has-text-black">
+                    Dexpay is a secure and fast point of sale for physical
+                    stores and online shops that accepts Ethereum and many other
+                    coins and instantly converts them to Dai stablecoin so you
+                    don't have to worry about volatilty.{' '}
+                    <a className="contact-us has-text-dark is-size-7 has-text-weight-bold is-uppercase">
+                      <span id="contact">Contact Us</span>
+                    </a>
                   </h2>
-
-                  <StoreButtons className="columns">
-                    <div className="column is-one-quarter">
-                      <nav className="level is-mobile">
-                        <div className="level-item has-text-centered has-text-black has-text-weight-semibold is-size-6 is-hidden-mobile">
-                          <TextStyled className="">Get it now on</TextStyled>
-                        </div>
-                        <div className="level-item has-text-centered">
-                          <a href="https://itunes.apple.com/us/app/dexwallet/id1434816150?ls=1&mt=8">
-                            <img
-                              src="/images/iOs_button@2x.png"
-                              alt="ios"
-                              data-platform="IOS"
-                            />
-                          </a>
-                        </div>
-                        <div className="level-item has-text-centered">
-                          <a onClick={this.handleClick}>
-                            <img
-                              src="/images/Play_button@2x.png"
-                              alt="google-play"
-                              data-platform="Android"
-                            />
-                          </a>
-                        </div>
-                      </nav>
-                    </div>
-                  </StoreButtons>
+                  <NewsletterGG />
+                  <SocialIcons />
                 </Wrapper>
                 <div className="column" />
               </div>
@@ -177,7 +160,7 @@ class HomeHero extends React.Component {
                 <div className="column" />
                 <Wrapper className="column is-two-thirds">
                   <h1 className="title is-size-1 has-text-black has-text-centered-mobile">
-                    The only Wallet you need.
+                    Sell more by accepting Dai, Eth and many other crypto
                   </h1>
                   <h2 className="subtitle is-size-5 has-text-black has-text-weight-light">
                     Finally you can be in control of your assets, secure your

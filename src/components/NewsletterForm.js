@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { darken } from 'polished';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 
 import theme from '../utils/theme';
@@ -20,7 +19,7 @@ const Container = styled.div`
     ::placeholder {
       color: #4a4a4a !important;
       font-size: 12px !important;
-      font-weight: ${theme.fontMedium};
+      font-weight: 100;
     }
   }
   .field.is-grouped > .control:not(:last-child) {
@@ -68,28 +67,36 @@ const Container = styled.div`
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+  .input {
+    border-radius: 0.1rem;
+    border: 1px solid #d3cfcf;
+  }
+  .checkmark {
+    border: 1px solid #000;
+  }
 `;
 
 const CheckBoxTxt = styled.span`
-  font-weight: ${theme.fontMedium};
+  font-weight: 100;
   font-size: 0.625rem;
   padding-left: 1.2rem;
-  color: ${theme.textColorWhite};
+  color: #000;
 `;
 
 const LabelStyled = styled.label`
   line-height: 3rem;
-  font-weight: ${theme.fontMedium};
+  font-weight: 100;
 `;
 
 const ButtonWrapper = styled.button`
-  background-color: ${theme.primaryColor} !important;
+  background-color: #00ffc7 !important;
   padding-left: 1.5em !important;
   padding-right: 1.5em !important;
   font-weight: ${theme.fontMedium};
+  border-radius: 0px !important;
   transition: 0.5s;
   :hover {
-    background-color: ${darken(0.2, theme.primaryColor)} !important;
+    background-color: #40bc9f !important;
   }
 `;
 
@@ -126,9 +133,7 @@ class NewsletterForm extends React.Component {
     return (
       <Container className="column has-text-white has-text-centered-mobile">
         {isVisible ? (
-          <LabelStyled className="is-size-3 has-text-white ">
-            Get our last updates
-          </LabelStyled>
+          <LabelStyled className="has-text-black">Try the App now!</LabelStyled>
         ) : null}
         <form onSubmit={this.handleSubmit}>
           <div className="field is-grouped">
@@ -147,7 +152,7 @@ class NewsletterForm extends React.Component {
                 type="submit"
                 target="_parent"
               >
-                <span className="is-size-6">SUBMIT</span>
+                <span className="is-size-6 has-text-black">JOIN BETA</span>
               </ButtonWrapper>
             </p>
           </div>
