@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
 import NewsletterGG from './NewsLetterGG';
 import SocialIcons from './SocialMediaIcons';
+import lang from '../utils/lang';
 
 const Container = styled.section`
   background: url(/images/header-bg-iphone.png);
@@ -75,21 +75,6 @@ const Container = styled.section`
   }
 `;
 
-const StoreButtons = styled.div`
-  padding-top: 1.6rem;
-  img {
-    height: 2.5rem;
-    @media only screen and (max-width: 600px) {
-      height: 3.3rem;
-    }
-  }
-  nav {
-    @media screen and (min-width: 768px) and (max-width: 1000px) {
-      padding: 0rem 14rem;
-    }
-  }
-`;
-
 const Wrapper = styled.div`
   padding-top: 8%;
   @media only screen and (max-width: 600px) {
@@ -98,10 +83,6 @@ const Wrapper = styled.div`
   @media screen and (min-width: 768px) and (max-width: 1000px) {
     padding-top: 64%;
   }
-`;
-
-const TextStyled = styled.div`
-  font-family: ${theme.secondaryFont};
 `;
 
 class HomeHero extends React.Component {
@@ -125,8 +106,6 @@ class HomeHero extends React.Component {
   }
 
   render() {
-    const { isClicked, platform } = this.state;
-
     return (
       <React.Fragment>
         <Container className="section">
@@ -138,10 +117,7 @@ class HomeHero extends React.Component {
                     Sell more by accepting Dai, Eth and many other crypto
                   </h1>
                   <h2 className="subtitle has-text-black">
-                    Dexpay is a secure and fast point of sale for physical
-                    stores and online shops that accepts Ethereum and many other
-                    coins and instantly converts them to Dai stablecoin so you
-                    don't have to worry about volatilty.{' '}
+                    {lang.heroSubTitle}{' '}
                     <a className="contact-us has-text-dark is-size-7 has-text-weight-bold is-uppercase">
                       <span id="contact">Contact Us</span>
                     </a>
@@ -150,51 +126,6 @@ class HomeHero extends React.Component {
                   <SocialIcons />
                 </Wrapper>
                 <div className="column" />
-              </div>
-            </div>
-
-            {/* mobile view alternate columns */}
-
-            <div className="is-hidden-tablet">
-              <div className="columns">
-                <div className="column" />
-                <Wrapper className="column is-two-thirds">
-                  <h1 className="title is-size-1 has-text-black has-text-centered-mobile">
-                    Sell more by accepting Dai, Eth and many other crypto
-                  </h1>
-                  <h2 className="subtitle is-size-5 has-text-black has-text-weight-light">
-                    Finally you can be in control of your assets, secure your
-                    private keys and enjoy the power of blockchain in a new,
-                    more free and fun way!
-                  </h2>
-                  <StoreButtons className="columns">
-                    <div className="column is-one-quarter">
-                      <nav className="level is-mobile">
-                        <div className="level-item has-text-centered has-text-black has-text-weight-semibold is-size-6 is-hidden-mobile">
-                          <TextStyled className="">Get it now on</TextStyled>
-                        </div>
-                        <div className="level-item has-text-centered">
-                          <a href="https://itunes.apple.com/us/app/dexwallet/id1434816150?ls=1&mt=8">
-                            <img
-                              src="/images/iOs_button@2x.png"
-                              alt="ios"
-                              data-platform="IOS"
-                            />
-                          </a>
-                        </div>
-                        <div className="level-item has-text-centered">
-                          <a onClick={this.handleClick}>
-                            <img
-                              src="/images/Play_button@2x.png"
-                              alt="google-play"
-                              data-platform="Android"
-                            />
-                          </a>
-                        </div>
-                      </nav>
-                    </div>
-                  </StoreButtons>
-                </Wrapper>
               </div>
             </div>
           </div>

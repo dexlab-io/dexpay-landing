@@ -164,7 +164,6 @@ class NewsletterForm extends React.Component {
             <span className="checkmark" />
           </label>
           <br />
-          <div className="">{message}</div>
         </form>
       </Container>
     );
