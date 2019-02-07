@@ -10,28 +10,28 @@ const Container = styled.section`
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 0rem;
-  padding-bottom: 19rem;
+  padding-bottom: 0rem;
   background-position: 0% 32%;
   @media only screen and (max-width: 600px) {
     background: url('/images/mobile-bg-iphone.png');
     background-size: cover;
     background-repeat: no-repeat;
-    padding-bottom: 2rem;
+    padding-bottom: 0rem;
   }
   @media screen and (min-width: 768px) and (max-width: 1000px) {
     background: url('/images/ipad-bg.png');
     background-size: cover;
-    padding-bottom: 2rem;
+    padding-bottom: 0rem;
     background-position: 0% 0%;
   }
   @media screen and (min-width: 1024px) and (max-width: 1366px) {
     background-size: 125%;
-    padding-bottom: 16rem;
+    padding-bottom: 0rem;
     background-position: 0% 0%;
   }
   @media screen and (min-width: 1000px) and (max-width: 1024px) {
     background-size: 125%;
-    padding-bottom: 5rem;
+    padding-bottom: 0rem;
     background-position: 0% 0%;
   }
 
@@ -52,7 +52,6 @@ const Container = styled.section`
   }
   .subtitle {
     line-height: 1.7rem;
-    text-align: justify;
     width: 92%;
     font-weight: 100;
     font-size: 1rem;
@@ -114,7 +113,7 @@ class HomeHero extends React.Component {
               <div className="columns">
                 <Wrapper className="column is-two-thirds">
                   <h1 className="title is-size-1 has-text-black has-text-centered-mobile">
-                    Sell more by accepting Dai, Eth and many other crypto
+                    {lang.heroTitle}
                   </h1>
                   <h2 className="subtitle has-text-black">
                     {lang.heroSubTitle}{' '}
