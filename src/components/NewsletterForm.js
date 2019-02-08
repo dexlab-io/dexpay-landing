@@ -107,9 +107,6 @@ class NewsletterForm extends React.Component {
       email: '',
       message: '',
     };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   // 2. via `async/await`
@@ -123,12 +120,13 @@ class NewsletterForm extends React.Component {
     }, 2000);
   };
 
-  handleChange(event) {
+  handleChange = event => {
     this.setState({ email: event.target.value });
-  }
+  };
 
   render() {
     const { message, email } = this.state;
+    console.log('message', message);
     const { isVisible } = this.props;
     return (
       <Container className="column has-text-white has-text-centered-mobile">

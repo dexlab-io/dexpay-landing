@@ -1,4 +1,4 @@
-const config = require ('./src/utils/config.js');
+const config = require('./src/utils/config.js');
 
 module.exports = {
   siteMetadata: {
@@ -62,13 +62,13 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: 'minimal-ui',
-        icon: './static/images/DexWallet_Icon@2x.png',
+        icon: './static/images/logo/logo.png',
       },
     },
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
-        logo: './static/images/DexWallet_Icon@2x.png',
+        logo: './static/images/logo/logo.png',
         injectHTML: true,
         icons: {
           android: true,

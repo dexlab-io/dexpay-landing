@@ -2,13 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.section`
+  .column {
+  }
   .is-two-thirds {
     justify-content: left;
     display: flex;
   }
+  .container {
+    margin-left: -1.5rem !important;
+  }
   .link {
-    margin-right: 2rem !important;
-    margin-top: -7rem;
+    margin-right: 3rem !important;
   }
 `;
 

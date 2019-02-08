@@ -1,9 +1,8 @@
 import React from 'react';
 
-import config from '../utils/config';
-import Seo from '../components/Seo';
 import Layout from '../components/Layout';
-
+import Seo from '../components/Seo';
+import config from '../utils/config';
 import HomeHero from '../components/HomeHero';
 
 export default class Index extends React.Component {

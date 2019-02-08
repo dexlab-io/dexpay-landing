@@ -5,23 +5,17 @@ import NewsletterForm from './NewsletterForm';
 
 const Container = styled.section`
   position: relative;
-  padding: 5.68rem 0rem;
-  @media only screen and (max-width: 600px) {
-    padding-top: 7rem;
-    padding-bottom: 3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    padding-bottom: 1rem;
-    padding-top: 7.5rem;
-  }
+  padding: 4rem 0rem;
+
   .columns {
     margin-left: 0rem;
     margin-right: 0rem;
     @media screen and (min-width: 768px) and (max-width: 1024px) {
       padding: 0rem 12rem;
     }
+  }
+  .column {
+    padding: 0rem;
   }
 `;
 

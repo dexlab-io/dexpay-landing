@@ -6,49 +6,13 @@ import NewsletterNew from './NewsLetterNew';
 import SocialIcons from './SocialMediaIcons';
 
 const Container = styled.section`
-  background: url(/images/header-bg-iphone.png);
-  background-size: cover;
+  background: url(/images/bg.png);
   background-repeat: no-repeat;
-  padding-top: 0rem;
-  padding-bottom: 0rem;
-  background-position: 0% 32%;
-  @media only screen and (max-width: 600px) {
-    background: url('/images/mobile-bg-iphone.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-bottom: 0rem;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1000px) {
-    background: url('/images/ipad-bg.png');
-    background-size: cover;
-    padding-bottom: 0rem;
-    background-position: 0% 0%;
-  }
-  @media screen and (min-width: 1024px) and (max-width: 1366px) {
-    background-size: 125%;
-    padding-bottom: 0rem;
-    background-position: 0% 0%;
-  }
-  @media screen and (min-width: 1000px) and (max-width: 1024px) {
-    background-size: 125%;
-    padding-bottom: 0rem;
-    background-position: 0% 0%;
-  }
-
+  background-size: 105%;
   .title {
     letter-spacing: -3px !important;
     font-family: 'Rubik', sans-serif;
     font-weight: 400 !important;
-    @media only screen and (max-width: 600px) {
-      font-size: 2.5rem !important;
-      line-height: 1;
-      letter-spacing: -3px !important;
-    }
-    @media screen and (min-width: 768px) and (max-width: 1000px) {
-      font-size: 2.5rem !important;
-      line-height: 1;
-      letter-spacing: -3px !important;
-    }
   }
   .subtitle {
     line-height: 1.7rem;
@@ -57,17 +21,7 @@ const Container = styled.section`
     font-size: 1rem;
     line-height: 1.4;
     letter-spacing: -0.5px !important;
-    @media only screen and (max-width: 600px) {
-      line-height: 2.1rem;
-      margin-top: 0rem !important;
-      width: 100%;
-    }
-    @media only screen and (max-width: 1000px) and (min-width: 600px) {
-      line-height: 2.1rem;
-      padding: 0rem 1rem;
-      margin-top: 0rem !important;
-      width: 100%;
-    }
+    padding-right: 1rem;
   }
   #contact {
     border-bottom: 2px solid #000;
@@ -82,6 +36,16 @@ const Wrapper = styled.div`
   @media screen and (min-width: 768px) and (max-width: 1000px) {
     padding-top: 64%;
   }
+  .logo {
+    height: 128px;
+    width: 175px;
+  }
+`;
+
+const Avatar = styled.figure`
+  width: 62%;
+  margin-top: 6rem;
+  margin-left: 11rem;
 `;
 
 class HomeHero extends React.Component {
@@ -108,10 +72,13 @@ class HomeHero extends React.Component {
     return (
       <React.Fragment>
         <Container className="section">
-          <div className="container">
+          <div className="container is-fluid">
             <div className="is-hidden-mobile">
               <div className="columns">
-                <Wrapper className="column is-two-thirds">
+                <Wrapper className="column is-three-fifths">
+                  <figure className="image logo">
+                    <img src="/images/logo/logo-2x.png" alt="Dexpay" />
+                  </figure>
                   <h1 className="title is-size-1 has-text-black has-text-centered-mobile">
                     {lang.heroTitle}
                   </h1>
@@ -124,7 +91,11 @@ class HomeHero extends React.Component {
                   <NewsletterNew />
                   <SocialIcons />
                 </Wrapper>
-                <div className="column" />
+                <div className="column">
+                  <Avatar className="image iphone-image">
+                    <img src="/images/iphone.png" alt="Iphone Image" />
+                  </Avatar>
+                </div>
               </div>
             </div>
           </div>
