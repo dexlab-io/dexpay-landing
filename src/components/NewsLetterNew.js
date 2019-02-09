@@ -6,7 +6,6 @@ import NewsletterForm from './NewsletterForm';
 const Container = styled.section`
   position: relative;
   padding: 4rem 0rem;
-
   .columns {
     margin-left: 0rem;
     margin-right: 0rem;

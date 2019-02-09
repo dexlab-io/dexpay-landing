@@ -9,6 +9,9 @@ const Container = styled.div`
   .field:not(:last-child) {
     margin-bottom: 0rem;
   }
+  .field .input {
+    border-radius: 2px !important;
+  }
 
   input {
     border-color: transparent;
@@ -93,7 +96,7 @@ const ButtonWrapper = styled.button`
   padding-left: 1.5em !important;
   padding-right: 1.5em !important;
   font-weight: ${theme.fontMedium};
-  border-radius: 0px !important;
+  border-radius: 2px !important;
   transition: 0.5s;
   :hover {
     background-color: #40bc9f !important;
@@ -144,7 +147,7 @@ class NewsletterForm extends React.Component {
                 onChange={this.handleChange}
               />
             </p>
-            <p className="control is-hidden-mobile">
+            <p className="control">
               <ButtonWrapper
                 className="button is-info is-medium"
                 type="submit"

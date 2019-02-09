@@ -8,7 +8,9 @@ import SocialIcons from './SocialMediaIcons';
 const Container = styled.section`
   background: url(/images/bg.png);
   background-repeat: no-repeat;
-  background-size: 105%;
+  background-size: 100%;
+  background-position: bottom;
+  padding-bottom: 0px !important;
   .title {
     letter-spacing: -3px !important;
     font-family: 'Rubik', sans-serif;
@@ -30,22 +32,26 @@ const Container = styled.section`
 
 const Wrapper = styled.div`
   padding-top: 8%;
-  @media only screen and (max-width: 600px) {
-    padding-top: 120%;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1000px) {
-    padding-top: 64%;
-  }
   .logo {
     height: 128px;
     width: 175px;
   }
 `;
 
-const Avatar = styled.figure`
-  width: 62%;
-  margin-top: 6rem;
-  margin-left: 11rem;
+const ImageWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  figure {
+    margin-top: -2.6rem;
+    margin-left: 7rem;
+    @media only screen and (max-width: 768px) {
+      margin-left: 0rem;
+    }
+    img {
+      width: 17rem;
+    }
+  }
 `;
 
 class HomeHero extends React.Component {
@@ -73,30 +79,32 @@ class HomeHero extends React.Component {
       <React.Fragment>
         <Container className="section">
           <div className="container is-fluid">
-            <div className="is-hidden-mobile">
-              <div className="columns">
-                <Wrapper className="column is-three-fifths">
-                  <figure className="image logo">
-                    <img src="/images/logo/logo-2x.png" alt="Dexpay" />
-                  </figure>
-                  <h1 className="title is-size-1 has-text-black has-text-centered-mobile">
-                    {lang.heroTitle}
-                  </h1>
-                  <h2 className="subtitle has-text-black">
-                    {lang.heroSubTitle}{' '}
-                    <a className="contact-us has-text-dark is-size-7 has-text-weight-bold is-uppercase">
-                      <span id="contact">Contact Us</span>
-                    </a>
-                  </h2>
-                  <NewsletterNew />
-                  <SocialIcons />
-                </Wrapper>
-                <div className="column">
-                  <Avatar className="image iphone-image">
-                    <img src="/images/iphone.png" alt="Iphone Image" />
-                  </Avatar>
-                </div>
-              </div>
+            <div className="columns">
+              <Wrapper className="column is-three-fifths">
+                <figure className="image logo">
+                  <img src="/images/logo/logo-2x.png" alt="Dexpay" />
+                </figure>
+                <h1 className="title is-size-1 has-text-black has-text-centered-mobile">
+                  {lang.heroTitle}
+                </h1>
+                <h2 className="subtitle has-text-black">
+                  {lang.heroSubTitle}{' '}
+                  <a
+                    className="contact-us has-text-dark is-size-7 has-text-weight-bold is-uppercase"
+                    href="info@dexlab.io"
+                    target="_blank"
+                  >
+                    <span id="contact">Contact Us</span>
+                  </a>
+                </h2>
+                <NewsletterNew />
+                <SocialIcons />
+              </Wrapper>
+              <ImageWrapper className="column">
+                <figure className="image">
+                  <img src="/images/iphone.png" alt="Iphone View" />
+                </figure>
+              </ImageWrapper>
             </div>
           </div>
         </Container>
