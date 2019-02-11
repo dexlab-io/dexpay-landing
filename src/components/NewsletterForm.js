@@ -12,7 +12,9 @@ const Container = styled.div`
   .field .input {
     border-radius: 2px !important;
   }
-
+  .form-text {
+    padding: 0 2px !important;
+  }
   input {
     border-color: transparent;
     padding-bottom: calc(1.9em - 1px) !important;
@@ -129,7 +131,6 @@ class NewsletterForm extends React.Component {
 
   render() {
     const { message, email } = this.state;
-    console.log('message', message);
     const { isVisible } = this.props;
     return (
       <Container className="column has-text-white has-text-centered-mobile">
@@ -138,7 +139,7 @@ class NewsletterForm extends React.Component {
         ) : null}
         <form onSubmit={this.handleSubmit}>
           <div className="field is-grouped">
-            <p className="control is-expanded has-text-black">
+            <p className="control form-text is-expanded has-text-black">
               <input
                 className="input is-medium is-size-7"
                 type="email"
@@ -156,6 +157,7 @@ class NewsletterForm extends React.Component {
                 <span className="is-size-6 has-text-black">JOIN BETA</span>
               </ButtonWrapper>
             </p>
+            <span className="has-text-dark">{message}</span>
           </div>
           <label className="wrapper">
             <input type="checkbox" />

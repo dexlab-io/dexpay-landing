@@ -15,6 +15,9 @@ const Container = styled.section`
     letter-spacing: -3px !important;
     font-family: 'Rubik', sans-serif;
     font-weight: 400 !important;
+    @media only screen and (max-width: 768px) {
+      text-align: left !important;
+    }
   }
   .subtitle {
     line-height: 1.7rem;
@@ -91,7 +94,7 @@ class HomeHero extends React.Component {
                   {lang.heroSubTitle}{' '}
                   <a
                     className="contact-us has-text-dark is-size-7 has-text-weight-bold is-uppercase"
-                    href="info@dexlab.io"
+                    href="mailto:getintouch@dexlab.io"
                     target="_blank"
                   >
                     <span id="contact">Contact Us</span>
