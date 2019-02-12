@@ -15,6 +15,13 @@ const Container = styled.div`
   .form-text {
     padding: 0 2px !important;
   }
+  .column {
+    width: 300px;
+    padding: 10px !important;
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
   input {
     border-color: transparent;
     padding-bottom: calc(1.9em - 1px) !important;
@@ -91,6 +98,11 @@ const CheckBoxTxt = styled.span`
 const LabelStyled = styled.label`
   line-height: 3rem;
   font-weight: 100;
+  justify-content: left;
+  @media only screen and (max-width: 768px) {
+    justify-content: left;
+    display: -webkit-box;
+  }
 `;
 
 const ButtonWrapper = styled.button`
@@ -100,6 +112,9 @@ const ButtonWrapper = styled.button`
   font-weight: ${theme.fontMedium};
   border-radius: 2px !important;
   transition: 0.5s;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
   :hover {
     background-color: #40bc9f !important;
   }
@@ -131,42 +146,51 @@ class NewsletterForm extends React.Component {
 
   render() {
     const { message, email } = this.state;
+    console.log('message', message);
     const { isVisible } = this.props;
     return (
-      <Container className="column has-text-white has-text-centered-mobile">
-        {isVisible ? (
-          <LabelStyled className="has-text-black">Try the App now!</LabelStyled>
-        ) : null}
+      <Container className="has-text-white ">
         <form onSubmit={this.handleSubmit}>
-          <div className="field is-grouped">
-            <p className="control form-text is-expanded has-text-black">
-              <input
-                className="input is-medium is-size-7"
-                type="email"
-                value={email}
-                placeholder="Your@email.here"
-                onChange={this.handleChange}
-              />
-            </p>
-            <p className="control">
-              <ButtonWrapper
-                className="button is-info is-medium"
-                type="submit"
-                target="_parent"
-              >
-                <span className="is-size-6 has-text-black">JOIN BETA</span>
-              </ButtonWrapper>
-            </p>
-            <span className="has-text-dark">{message}</span>
+          {isVisible ? (
+            <LabelStyled className="has-text-black">
+              Try the App now!
+            </LabelStyled>
+          ) : null}
+          <div className="columns">
+            <div className="column first">
+              <div className="field is-grouped">
+                <p className="control form-text is-expanded has-text-black">
+                  <input
+                    className="input is-medium is-size-7"
+                    type="email"
+                    value={email}
+                    placeholder="Your@email.here"
+                    onChange={this.handleChange}
+                  />
+                </p>
+              </div>
+              <label className="wrapper">
+                <input type="checkbox" />
+                <CheckBoxTxt className="is-size-7-mobile">
+                  {lang.newsletterText}
+                </CheckBoxTxt>
+                <span className="checkmark" />
+              </label>
+              <br />
+            </div>
+            <div className="column">
+              <p className="control">
+                <ButtonWrapper
+                  className="button is-info is-medium"
+                  type="submit"
+                  target="_parent"
+                >
+                  <span className="is-size-6 has-text-black">JOIN BETA</span>
+                </ButtonWrapper>
+              </p>
+            </div>
           </div>
-          <label className="wrapper">
-            <input type="checkbox" />
-            <CheckBoxTxt className="is-size-7-mobile">
-              {lang.newsletterText}
-            </CheckBoxTxt>
-            <span className="checkmark" />
-          </label>
-          <br />
+          <span className="has-text-dark">{message}</span>
         </form>
       </Container>
     );
