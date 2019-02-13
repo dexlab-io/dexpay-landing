@@ -16,6 +16,7 @@ const Container = styled.section`
     background-position: top right;
     background-size: 114%;
     background-repeat: no-repeat;
+    margin-top: -2rem;
   }
   img {
     @media only screen and (max-width: 768px) {
@@ -54,9 +55,18 @@ const Container = styled.section`
     line-height: 1.4;
     letter-spacing: -0.5px !important;
     padding-right: 1rem;
+    @media only screen and (max-width: 768px) {
+      font-size: 15px;
+      text-align: justify;
+      width: 100%;
+      padding-right: 0rem;
+    }
   }
   #contact {
     border-bottom: 2px solid #000;
+    @media only screen and (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
 `;
 
