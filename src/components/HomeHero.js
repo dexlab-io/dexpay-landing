@@ -16,7 +16,6 @@ const Container = styled.section`
     background-position: top right;
     background-size: 114%;
     background-repeat: no-repeat;
-    margin-top: -2rem;
   }
   img {
     @media only screen and (max-width: 768px) {
