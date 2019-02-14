@@ -3,7 +3,7 @@ module.exports = {
   siteName: 'Dexpay',
   logo: '/images/dexWallet_Icon@2x',
   author: 'Parminder Klair',
-  description: 'The Payment Wallet you need by Dexpay',
+  description: 'Accepting xDAI, Dai, Eth and many other crypto',
   siteUrl: 'https://www.dexpay.me/',
   image: 'https://www.dexpay.me/images/social-preview.png',
   twitter: '@dexlab_io',
