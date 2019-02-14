@@ -11,12 +11,40 @@ const Container = styled.section`
   background-size: 100%;
   background-position: bottom;
   padding-bottom: 0px !important;
+  @media only screen and (max-width: 768px) {
+    background: url(/images/mobilebg.png);
+    background-position: top right;
+    background-size: 114%;
+    background-repeat: no-repeat;
+    margin-top: -2rem;
+  }
+  img {
+    @media only screen and (max-width: 768px) {
+      width: 50%;
+      height: 100%;
+    }
+  }
+  .logos {
+    @media only screen and (max-width: 768px) {
+      justify-content: center;
+      display: flex;
+      justify-items: center;
+    }
+  }
+  .home-hero {
+    @media only screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: 20rem;
+    }
+  }
   .title {
     letter-spacing: -3px !important;
     font-family: 'Rubik', sans-serif;
     font-weight: 400 !important;
     @media only screen and (max-width: 768px) {
       text-align: left !important;
+      font-size: 2.5rem !important;
     }
   }
   .subtitle {
@@ -27,14 +55,26 @@ const Container = styled.section`
     line-height: 1.4;
     letter-spacing: -0.5px !important;
     padding-right: 1rem;
+    @media only screen and (max-width: 768px) {
+      font-size: 15px;
+      text-align: justify;
+      width: 100%;
+      padding-right: 0rem;
+    }
   }
   #contact {
     border-bottom: 2px solid #000;
+    @media only screen and (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
 `;
 
 const Wrapper = styled.div`
   padding-top: 8%;
+  @media only screen and (max-width: 768px) {
+    padding-top: 100%;
+  }
   .logo {
     height: 128px;
     width: 175px;
@@ -53,6 +93,9 @@ const ImageWrapper = styled.div`
     }
     img {
       width: 17rem;
+      @media only screen and (max-width: 768px) {
+        width: 15rem;
+      }
     }
   }
 `;
@@ -82,9 +125,12 @@ class HomeHero extends React.Component {
       <React.Fragment>
         <Container className="section">
           <div className="container is-fluid">
-            <div className="columns">
-              <Wrapper className="column is-three-fifths">
-                <figure className="image logo">
+            <figure className="image logos is-hidden-tablet">
+              <img src="/images/logo/logo-2x.png" alt="Dexpay" />
+            </figure>
+            <div className="columns home-hero">
+              <Wrapper className="column is-8 is-three-fifths">
+                <figure className="image logo is-hidden-mobile">
                   <img src="/images/logo/logo-2x.png" alt="Dexpay" />
                 </figure>
                 <h1 className="title is-size-1 has-text-black has-text-centered-mobile">

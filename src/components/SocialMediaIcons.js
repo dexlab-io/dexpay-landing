@@ -2,6 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.section`
+  @media only screen and (max-width: 768px) {
+    margin-top: -4rem;
+  }
+  .container {
+    @media only screen and (max-width: 768px) {
+      justify-content: center;
+      display: contents;
+      justify-items: center;
+    }
+  }
+  .columns {
+    @media only screen and (max-width: 768px) {
+      justify-content: center;
+      display: contents;
+    }
+  }
   .column {
   }
   .is-two-thirds {
@@ -14,6 +30,11 @@ const Container = styled.section`
   .link {
     margin-right: 3rem !important;
   }
+  img {
+    @media only screen and (max-width: 768px) {
+      width: 100% !important;
+    }
+  }
 `;
 
 const SocialIcons = () => (
@@ -21,11 +42,11 @@ const SocialIcons = () => (
     <div className="container">
       <div className="columns">
         <div className="column is-two-thirds has-text-centered-mobile">
-          <div className="level-item has-text-centered">
+          <p className="level-item has-text-centered">
             <a className="link is-info" href="https://t.me/joindexlab">
               <img src="/images/social/icon_telegram.svg" alt="telegram" />
             </a>
-          </div>
+          </p>
           <p className="level-item has-text-centered">
             <a className="link is-info" href="https://medium.com/dexlab-io">
               <img src="/images/social/icon_medium.svg" alt="medium" />
