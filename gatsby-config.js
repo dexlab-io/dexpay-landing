@@ -62,13 +62,13 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: 'minimal-ui',
-        icon: './static/images/logo/logo.png',
+        icon: './static/images/icon.png',
       },
     },
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
-        logo: './static/images/logo/logo.png',
+        logo: './static/images/icon.png',
         injectHTML: true,
         icons: {
           android: true,
