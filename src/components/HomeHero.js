@@ -11,6 +11,8 @@ const Container = styled.section`
   background-size: 100%;
   background-position: bottom;
   padding-bottom: 0px !important;
+  padding: 0rem 1.5rem !important;
+  position: relative;
   @media only screen and (max-width: 768px) {
     background: url(/images/mobilebg.png);
     background-position: top right;
@@ -21,6 +23,7 @@ const Container = styled.section`
     @media only screen and (max-width: 768px) {
       width: 50%;
       height: 100%;
+      margin-top: 10%;
     }
   }
   .logos {
@@ -44,6 +47,7 @@ const Container = styled.section`
     @media only screen and (max-width: 768px) {
       text-align: left !important;
       font-size: 2.5rem !important;
+      margin-top: 12%;
     }
   }
   .subtitle {
@@ -75,7 +79,7 @@ const Wrapper = styled.div`
     padding-top: 100%;
   }
   .logo {
-    height: 128px;
+    height: 118px;
     width: 175px;
   }
 `;
