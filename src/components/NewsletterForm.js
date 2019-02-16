@@ -15,6 +15,11 @@ const Container = styled.div`
   .form-text {
     padding: 0 2px !important;
   }
+  .columns {
+    justify-content: left;
+    justify-items: left;
+    display: flex;
+  }
   .column {
     width: 300px;
     padding: 10px !important;
