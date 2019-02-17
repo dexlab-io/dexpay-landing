@@ -15,11 +15,6 @@ const Container = styled.div`
   .form-text {
     padding: 0 2px !important;
   }
-  .columns {
-    justify-content: left;
-    justify-items: left;
-    display: flex;
-  }
   .column {
     width: 300px;
     padding: 10px !important;
@@ -154,7 +149,7 @@ class NewsletterForm extends React.Component {
     console.log('message', message);
     const { isVisible } = this.props;
     return (
-      <Container className="has-text-white ">
+      <Container className="has-text-white">
         <form onSubmit={this.handleSubmit}>
           {isVisible ? (
             <LabelStyled className="has-text-black">
@@ -162,7 +157,7 @@ class NewsletterForm extends React.Component {
             </LabelStyled>
           ) : null}
           <div className="columns">
-            <div className="column first">
+            <div className="column">
               <div className="field is-grouped">
                 <p className="control form-text is-expanded has-text-black">
                   <input
