@@ -37,7 +37,7 @@ const Container = styled.section`
     @media only screen and (max-width: 768px) {
       display: flex;
       flex-direction: column-reverse;
-      margin-top: 20rem;
+      margin-top: 2rem;
     }
   }
   .title {
@@ -76,7 +76,7 @@ const Container = styled.section`
 const Wrapper = styled.div`
   padding-top: 8%;
   @media only screen and (max-width: 768px) {
-    padding-top: 100%;
+    padding-top: 0%;
   }
   .logo {
     height: 118px;
