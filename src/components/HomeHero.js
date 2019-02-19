@@ -5,7 +5,7 @@ import lang from '../utils/lang';
 import NewsletterNew from './NewsLetterNew';
 import SocialIcons from './SocialMediaIcons';
 
-const Container = styled.section`
+const Section = styled.section`
   background: url(/images/bg.png);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -16,8 +16,10 @@ const Container = styled.section`
   @media only screen and (max-width: 768px) {
     background: url(/images/mobilebg.png);
     background-position: top right;
-    background-size: 114%;
+    background-size: 100%;
     background-repeat: no-repeat;
+    height: auto;
+    position: relative;
   }
   img {
     @media only screen and (max-width: 768px) {
@@ -88,6 +90,7 @@ const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  
   figure {
     margin-top: -2.6rem;
     margin-left: 7rem;
@@ -126,8 +129,8 @@ class HomeHero extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Container className="section">
-          <div className="container is-fluid">
+        <Section className="section">
+          <div className="container">
             <figure className="image logos is-hidden-tablet">
               <img src="/images/logo/logo-2x.png" alt="Dexpay" />
             </figure>
@@ -159,7 +162,7 @@ class HomeHero extends React.Component {
               </ImageWrapper>
             </div>
           </div>
-        </Container>
+        </Section>
       </React.Fragment>
     );
   }

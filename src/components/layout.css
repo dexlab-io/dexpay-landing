@@ -5,18 +5,7 @@ select,
 textarea {
   font-family: 'Rubik', sans-serif !important;
 }
-@media screen and (min-width: 1472px) {
-  .container {
-    max-width: 960px;
-    width: 960px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .container {
-    max-width: 960px;
-    width: 960px;
-  }
-}
+
 .primary-font {
   font-family: 'Quicksand', sans-serif;
 }
@@ -31,7 +20,6 @@ textarea {
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 0.4rem !important;
 }
-
 .button {
   border-radius: 0.375rem !important;
 }
