@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Container = styled.section`
+const Section = styled.section`
   @media only screen and (max-width: 768px) {
     margin-top: -4rem;
   }
@@ -35,10 +35,15 @@ const Container = styled.section`
       width: 100% !important;
     }
   }
+  .level-item:last-child {
+    @media only screen and (max-width: 768px) {
+      margin-top: -10px;
+    }
+  }
 `;
 
 const SocialIcons = () => (
-  <Container className="section">
+  <Section className="section">
     <div className="container">
       <div className="columns">
         <div className="column is-two-thirds has-text-centered-mobile">
@@ -65,7 +70,7 @@ const SocialIcons = () => (
         </div>
       </div>
     </div>
-  </Container>
+  </Section>
 );
 
 export default SocialIcons;
