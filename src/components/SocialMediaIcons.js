@@ -28,7 +28,7 @@ const Section = styled.section`
     margin-left: -1.5rem !important;
   }
   .link {
-    margin-right: 3rem !important;
+    margin-right: 2.6rem !important;
   }
   img {
     @media only screen and (max-width: 768px) {
@@ -47,6 +47,11 @@ const SocialIcons = () => (
     <div className="container">
       <div className="columns">
         <div className="column is-two-thirds has-text-centered-mobile">
+          <p className="level-item has-text-centered">
+            <a className="link is-info" href="https://dexpay.me/discord">
+              <img src="/images/social/discord2.png" alt="discord" />
+            </a>
+          </p>
           <p className="level-item has-text-centered">
             <a className="link is-info" href="https://t.me/joindexlab">
               <img src="/images/social/icon_telegram.svg" alt="telegram" />
