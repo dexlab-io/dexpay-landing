@@ -48,7 +48,7 @@ const SocialIcons = () => (
       <div className="columns">
         <div className="column is-two-thirds has-text-centered-mobile">
           <p className="level-item has-text-centered">
-            <a className="link is-info" href="https://discord.gg/rrCCHnG">
+            <a className="link is-info" href="https://dexpay.me/discord">
               <img src="/images/social/discord2.png" alt="discord" />
             </a>
           </p>
