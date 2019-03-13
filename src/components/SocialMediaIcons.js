@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
+  padding: 0 8px !important;
   @media only screen and (max-width: 768px) {
     margin-top: -4rem;
   }
@@ -30,6 +31,12 @@ const Section = styled.section`
   .link {
     margin-right: 2.6rem !important;
   }
+  .discord {
+    width: 36% !important;
+    height: 22px;
+    margin-top: -10px;
+    margin-right: 1.3rem !important;
+  }
   img {
     @media only screen and (max-width: 768px) {
       width: 100% !important;
@@ -48,8 +55,11 @@ const SocialIcons = () => (
       <div className="columns">
         <div className="column is-two-thirds has-text-centered-mobile">
           <p className="level-item has-text-centered">
-            <a className="link is-info" href="https://dexpay.me/discord">
-              <img src="/images/social/discord2.png" alt="discord" />
+            <a
+              className="link discord is-info"
+              href="https://dexpay.me/discord"
+            >
+              <img src="/images/social/discord.png" alt="discord" />
             </a>
           </p>
           <p className="level-item has-text-centered">
