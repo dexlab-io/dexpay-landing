@@ -59,7 +59,7 @@ const SocialIcons = () => (
               className="link discord is-info"
               href="https://dexpay.me/discord"
             >
-              <img src="/images/social/discord.png" alt="discord" />
+              <img src="/images/social/icon_discord.png" alt="discord" />
             </a>
           </p>
           <p className="level-item has-text-centered">
