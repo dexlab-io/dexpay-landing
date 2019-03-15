@@ -26,16 +26,13 @@ const Section = styled.section`
     display: flex;
   }
   .container {
-    margin-left: -1.5rem !important;
+    margin-left: -0.5rem !important;
   }
   .link {
     margin-right: 2.6rem !important;
   }
-  .discord {
-    width: 36% !important;
+  .discord img {
     height: 22px;
-    margin-top: -10px;
-    margin-right: 1.3rem !important;
   }
   img {
     @media only screen and (max-width: 768px) {
@@ -59,7 +56,7 @@ const SocialIcons = () => (
               className="link discord is-info"
               href="https://dexpay.me/discord"
             >
-              <img src="/images/social/icon_discord.png" alt="discord" />
+              <img src="/images/social/icon_discord.svg" alt="discord" />
             </a>
           </p>
           <p className="level-item has-text-centered">
