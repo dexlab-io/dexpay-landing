@@ -24,6 +24,9 @@ const Section = styled.section`
   .is-two-thirds {
     justify-content: left;
     display: flex;
+    @media only screen and (max-width: 768px) {
+      justify-content: center;
+    }
   }
   .container {
     margin-left: -0.5rem !important;
@@ -31,8 +34,16 @@ const Section = styled.section`
   .link {
     margin-right: 2.6rem !important;
   }
+  .dis {
+    margin-right: 2.6rem !important;
+    @media only screen and (max-width: 768px) {
+      margin-right: 0rem !important;
+      margin-top: -10px;
+    }
+  }
   .discord img {
     height: 22px;
+    color: rgb(78, 72, 72);
   }
   img {
     @media only screen and (max-width: 768px) {
@@ -50,13 +61,10 @@ const SocialIcons = () => (
   <Section className="section">
     <div className="container">
       <div className="columns">
-        <div className="column is-two-thirds has-text-centered-mobile">
+        <div className="column is-two-thirds">
           <p className="level-item has-text-centered">
-            <a
-              className="link discord is-info"
-              href="https://dexpay.me/discord"
-            >
-              <img src="/images/social/icon_discord.svg" alt="discord" />
+            <a className="dis discord is-info" href="https://dexpay.me/discord">
+              <img src="/images/social/discord.svg" alt="discord" />
             </a>
           </p>
           <p className="level-item has-text-centered">
