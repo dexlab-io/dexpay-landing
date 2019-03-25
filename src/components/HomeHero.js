@@ -49,7 +49,7 @@ const Section = styled.section`
     @media only screen and (max-width: 768px) {
       text-align: left !important;
       font-size: 2.5rem !important;
-      margin-top: 12%;
+      margin-top: -80%;
     }
   }
   .subtitle {
@@ -90,12 +90,13 @@ const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   figure {
     margin-top: -2.6rem;
     margin-left: 7rem;
     @media only screen and (max-width: 768px) {
       margin-left: 0rem;
+      margin-top: -16.6rem;
     }
     img {
       width: 17rem;
