@@ -1,5 +1,5 @@
 module.exports = {
-  heroTitle: `The only Wallet you need.`,
+  heroTitle: `Sell more by accepting Dai, Eth and many other crypto`,
   whitelabelHeroTitle: `Whitelabel Wallet solution for your company`,
   whitelabelHeroSubtitle: `All the DexWallet functionalities and much more in a ready-to-use solution that will give a kick to your crypto-project.`,
   heroSubTitle: `Dexpay is a secure and fast point of sale for physical
