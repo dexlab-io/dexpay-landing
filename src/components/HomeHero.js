@@ -129,9 +129,100 @@ class HomeHero extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
         <Section className="section">
           <div className="container">
+          {/* <Modal
+              isClicked={isClicked}
+              platform={platform}
+              handleClick={this.handleClick}
+            /> */}
+            {/* <div className="is-hidden-mobile">
+              <div className="columns">
+                <Wrapper className="column is-two-thirds">
+                  <h1 className="title is-size-1 has-text-black has-text-centered-mobile">
+                    {lang.heroTitle}
+                  </h1>
+                  <h2 className="subtitle is-size-5 has-text-black has-text-weight-light">
+                    {lang.heroSubTitle}
+                  </h2>
+
+                  <StoreButtons className="columns">
+                    <div className="column is-one-quarter">
+                      <nav className="level is-mobile">
+                        <div className="level-item has-text-centered has-text-black has-text-weight-semibold is-size-6 is-hidden-mobile">
+                          <TextStyled className="">Get it now on</TextStyled>
+                        </div>
+                        <div className="level-item has-text-centered">
+                          <a href="https://itunes.apple.com/us/app/dexwallet/id1434816150?ls=1&mt=8">
+                            <img
+                              src="/images/iOs_button@2x.png"
+                              alt="ios"
+                              data-platform="IOS"
+                            />
+                          </a>
+                        </div>
+                        <div className="level-item has-text-centered">
+                          <a href="https://play.google.com/store/apps/details?id=io.dexlab.dexwallet">
+                            <img
+                              src="/images/Play_button@2x.png"
+                              alt="google-play"
+                              data-platform="Android"
+                            />
+                          </a>
+                        </div>
+                      </nav>
+                    </div>
+                  </StoreButtons>
+                </Wrapper>
+                <div className="column" />
+              </div>
+            </div> */}
+
+            {/* mobile view alternate columns */}
+
+            {/* <div className="is-hidden-tablet">
+              <div className="columns">
+                <div className="column" />
+                <Wrapper className="column is-two-thirds">
+                  <h1 className="title is-size-1 has-text-black has-text-centered-mobile">
+                    The only Wallet you need.
+                  </h1>
+                  <h2 className="subtitle is-size-5 has-text-black has-text-weight-light">
+                    Finally you can be in control of your assets, secure your
+                    private keys and enjoy the power of blockchain in a new,
+                    more free and fun way!
+                  </h2>
+                  <StoreButtons className="columns">
+                    <div className="column is-one-quarter">
+                      <nav className="level is-mobile">
+                        <div className="level-item has-text-centered has-text-black has-text-weight-semibold is-size-6 is-hidden-mobile">
+                          <TextStyled className="">Get it now on</TextStyled>
+                        </div>
+                        <div className="level-item has-text-centered">
+                          <a href="https://itunes.apple.com/us/app/dexwallet/id1434816150?ls=1&mt=8">
+                            <img
+                              src="/images/iOs_button@2x.png"
+                              alt="ios"
+                              data-platform="IOS"
+                            />
+                          </a>
+                        </div>
+                        <div className="level-item has-text-centered">
+                          <a onClick={this.handleClick}>
+                            <img
+                              src="/images/Play_button@2x.png"
+                              alt="google-play"
+                              data-platform="Android"
+                            />
+                          </a>
+                        </div>
+                      </nav>
+                    </div>
+                  </StoreButtons>
+                  </Wrapper>
+                  </div>
+                  </div>
+                  </div> */}
             <figure className="image logos is-hidden-tablet">
               <img src="/images/logo/logo-2x.png" alt="Dexpay" />
             </figure>
@@ -163,8 +254,8 @@ class HomeHero extends React.Component {
               </ImageWrapper>
             </div>
           </div>
+        
         </Section>
-      </React.Fragment>
     );
   }
 }
