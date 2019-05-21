@@ -4,6 +4,9 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import config from '../utils/config';
 import HomeHero from '../components/HomeHero';
+import SectionFees from '../components/SectionFees';
+import Features from '../components/Features';
+import Section from '../components/Section';
 
 export default class Index extends React.Component {
   render() {
@@ -16,6 +19,9 @@ export default class Index extends React.Component {
           image={config.image}
         />
         <HomeHero />
+        <SectionFees />
+        <Features />
+        <Section />
       </Layout>
     );
   }

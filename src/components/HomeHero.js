@@ -129,42 +129,40 @@ class HomeHero extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
-        <Section className="section">
-          <div className="container">
-            <figure className="image logos is-hidden-tablet">
-              <img src="/images/logo/logo-2x.png" alt="Dexpay" />
-            </figure>
-            <div className="columns home-hero">
-              <Wrapper className="column is-8 is-three-fifths">
-                <figure className="image logo is-hidden-mobile">
-                  <img src="/images/logo/logo-2x.png" alt="Dexpay" />
-                </figure>
-                <h1 className="title is-size-1 has-text-black has-text-centered-mobile">
-                  {lang.heroTitle}
-                </h1>
-                <h2 className="subtitle has-text-black">
-                  {lang.heroSubTitle}{' '}
-                  <a
-                    className="contact-us has-text-dark is-size-7 has-text-weight-bold is-uppercase"
-                    href="mailto:getintouch@dexlab.io"
-                    target="_blank"
-                  >
-                    <span id="contact">Contact Us</span>
-                  </a>
-                </h2>
-                <NewsletterNew />
-                <SocialIcons />
-              </Wrapper>
-              <ImageWrapper className="column">
-                <figure className="image">
-                  <img src="/images/iphone.png" alt="Iphone View" />
-                </figure>
-              </ImageWrapper>
-            </div>
+      <Section className="section">
+        <div className="container">
+          <figure className="image logos is-hidden-tablet">
+            <img src="/images/logo/logo-2x.png" alt="Dexpay" />
+          </figure>
+          <div className="columns home-hero">
+            <Wrapper className="column is-8 is-three-fifths">
+              <figure className="image logo is-hidden-mobile">
+                <img src="/images/logo/logo-2x.png" alt="Dexpay" />
+              </figure>
+              <h1 className="title is-size-1 has-text-black has-text-centered-mobile">
+                {lang.heroTitle}
+              </h1>
+              <h2 className="subtitle has-text-black">
+                {lang.heroSubTitle}{' '}
+                <a
+                  className="contact-us has-text-dark is-size-7 has-text-weight-bold is-uppercase"
+                  href="mailto:getintouch@dexlab.io"
+                  target="_blank"
+                >
+                  <span id="contact">Contact Us</span>
+                </a>
+              </h2>
+              <NewsletterNew />
+              <SocialIcons />
+            </Wrapper>
+            <ImageWrapper className="column">
+              <figure className="image">
+                <img src="/images/iphone.png" alt="Iphone View" />
+              </figure>
+            </ImageWrapper>
           </div>
-        </Section>
-      </React.Fragment>
+        </div>
+      </Section>
     );
   }
 }
